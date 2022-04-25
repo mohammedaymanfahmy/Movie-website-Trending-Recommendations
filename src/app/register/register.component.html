@@ -1,0 +1,37 @@
+<h1>Register Form</h1>
+
+<form [formGroup]="registerform" (ngSubmit)="register()">
+
+  <div class="form-group">
+    <label>Frist Name</label>
+    <input type="text" class="form-control my-3" formControlName="firstName">
+    <span [class.is-invalid]="registerform.controls['firstName'].invalid&&registerform.controls['firstName'].touched" *ngIf="registerform.controls['firstName'].invalid&&registerform.controls['firstName'].touched" class="text-danger">first name is not valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" class="form-control my-3" formControlName="lastName">
+    <span [class.is-invalid]="registerform.controls['lastName'].invalid&&registerform.controls['lastName'].touched" *ngIf="registerform.controls['lastName'].invalid&&registerform.controls['lastName'].touched"  class="text-danger">last name is not valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>Age</label>
+    <input type="text" class="form-control my-3" formControlName="age">
+    <span [class.is-invalid]="registerform.controls['age'].invalid&&registerform.controls['age'].touched" *ngIf="registerform.controls['age'].invalid&&registerform.controls['age'].touched"  class="text-danger">Age is not valid</span>
+  </div>
+
+
+  <div class="form-group">
+    <label>E-mail</label>
+    <input type="text" class="form-control my-3" formControlName="email">
+    <span [class.is-invalid]="registerform.controls['email'].invalid&&registerform.controls['email'].touched" *ngIf="registerform.controls['email'].invalid&&registerform.controls['email'].touched"  class="text-danger">email is not valid</span>
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="text" class="form-control my-3" formControlName="password">
+    <span [class.is-invalid]="registerform.controls['password'].invalid&&registerform.controls['password'].touched" *ngIf="registerform.controls['password'].invalid&&registerform.controls['password'].touched"  class="text-danger">password is not valid</span>
+  </div>
+<button  class="btn btn-info" type="submit">Reginter</button>
+
+</form>
